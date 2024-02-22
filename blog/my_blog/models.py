@@ -23,6 +23,9 @@ class Comment(models.Model):
     class Meta:
         ordering = ['created']
 
+    def __str__(self):
+        return self.body
+
 
 class Category(models.Model):
     name = models.CharField(max_length=100, blank=False, default='')
